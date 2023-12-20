@@ -13,6 +13,7 @@ spring:
             - Path=/client/**
           filters:
             - RewritePath=/client/?(?<segment>.*), /$\{segment}
+            - CircuitBreaker=defaultCustomizer
 
 eureka:
   client:
